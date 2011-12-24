@@ -2,10 +2,6 @@ package nl.wouterenrobin.project1;
 
 import static org.lwjgl.opengl.GL11.GL_STENCIL_BUFFER_BIT;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
@@ -44,8 +40,6 @@ public class Game
 		GL11.glClearAccum(0f,0f,0f,1f);
 		GL11.glClear(GL11.GL_ACCUM_BUFFER_BIT);
 		
-		//Sounds.music.playAsMusic(1f, 1f,true);
-		
 		while(!Display.isCloseRequested() && !finished)
 		{
 			if (System.currentTimeMillis()-time>1000)
@@ -61,6 +55,7 @@ public class Game
 			GL11.glLoadIdentity();
 			GL11.glOrtho(0, WIDTH,HEIGHT, 0, -10,10);
 			Manager.DrawBackground();
+			
 			
 			GL11.glMatrixMode(GL11.GL_MODELVIEW);
 			GL11.glLoadIdentity();

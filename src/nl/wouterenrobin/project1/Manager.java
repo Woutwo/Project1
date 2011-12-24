@@ -2,7 +2,7 @@ package nl.wouterenrobin.project1;
 
 public class Manager
 {
-	public static State s;
+	public static State s = new TestState();
 	public static State overlaystate;
 	public static void Update()
 	{
