@@ -9,19 +9,33 @@ public class TestState extends State
 	{
 		super.Update();
 		f+=1;
+		
 		if (Keyboard.isKeyDown(Keyboard.KEY_UP))
 		{
-			Camera.y--;
+			Camera.y -= 5;
 		}
 		if (Keyboard.isKeyDown(Keyboard.KEY_DOWN))
 		{
-			Camera.y++;
+			Camera.y += 5;
 		}
+		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT))
+		{
+			Camera.x -= 5;
+		}
+		if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT))
+		{
+			Camera.x += 5;
+		}
+		if(Keyboard.isKeyDown(Keyboard.KEY_W)){
+			Poppetje.jump();
+		}
+		
+		Poppetje.update();
 	}
 	public void Draw()
 	{
 		super.Draw();
 		Images.test.draw(-200f, -200f,1600f,1600f);
-		Images.test.draw(32f, 32f);
+		Images.test.draw(Poppetje.x, Poppetje.y);
 	}
 }

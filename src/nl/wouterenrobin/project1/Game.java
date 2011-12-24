@@ -11,6 +11,7 @@ public class Game
 {
 	public static final int WIDTH = 640;
 	public static final int HEIGHT = 480;
+	public Poppetje player;
 	
 	// FPS counter:
 	private static long time = System.currentTimeMillis();
@@ -40,6 +41,8 @@ public class Game
 		
 		GL11.glClearAccum(0f,0f,0f,1f);
 		GL11.glClear(GL11.GL_ACCUM_BUFFER_BIT);
+		
+		Poppetje.init();
 		
 		while(!Display.isCloseRequested() && !finished)
 		{
