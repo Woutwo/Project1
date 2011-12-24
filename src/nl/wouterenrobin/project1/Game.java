@@ -42,8 +42,6 @@ public class Game
 		GL11.glClearAccum(0f,0f,0f,1f);
 		GL11.glClear(GL11.GL_ACCUM_BUFFER_BIT);
 		
-		Poppetje.init();
-		
 		while(!Display.isCloseRequested() && !finished)
 		{
 			if (System.currentTimeMillis()-time>1000)
